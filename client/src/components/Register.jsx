@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Shield, Mail, Lock, User, UserPlus, AlertCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
+import logoImg from '../assets/logo.png';
 
 import { API_BASE_URL } from '../config';
 
@@ -45,7 +46,7 @@ const Register = ({ onRegister, onSwitch }) => {
     >
       <div className="auth-header">
         <div className="auth-logo">
-          <Shield size={32} color="var(--primary)" />
+          <img src={logoImg} alt="Cyber Guard Logo" className="auth-logo-img" />
         </div>
         <h2>Create Account</h2>
         <p>Join Cyber Guard to shield your digital life</p>
@@ -131,15 +132,23 @@ const Register = ({ onRegister, onSwitch }) => {
         }
 
         .auth-logo {
-          width: 60px;
-          height: 60px;
-          background: rgba(99, 102, 241, 0.1);
-          border-radius: 16px;
+          width: 84px;
+          height: 84px;
+          background: rgba(99, 102, 241, 0.08);
+          border-radius: 20px;
           display: flex;
           align-items: center;
           justify-content: center;
           margin: 0 auto 1.5rem;
           border: 1px solid var(--glass-border);
+          padding: 10px;
+        }
+
+        .auth-logo-img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          filter: drop-shadow(0 0 10px rgba(0, 216, 255, 0.5));
         }
 
         .auth-header h2 {

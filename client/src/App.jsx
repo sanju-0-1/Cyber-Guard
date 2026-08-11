@@ -9,6 +9,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Login from './components/Login';
 import Register from './components/Register';
 import AdminDashboard from './components/AdminDashboard';
+import logoImg from './assets/logo.png';
 import './App.css';
 import { initParticlesEngine, Particles } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
@@ -224,7 +225,7 @@ function App() {
 
       <nav className="navbar container">
         <div className="logo" onClick={() => setView('home')} style={{ cursor: 'pointer' }}>
-          <Shield className="logo-icon" color="var(--primary)" size={28} />
+          <img src={logoImg} alt="Cyber Guard Logo" className="logo-img" />
           <span>Cyber Guard</span>
         </div>
         <div className="nav-links">
